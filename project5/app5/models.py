@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 
 class UserProfileInfo(models.Model):
 
-    user = models.OneToOneField(User) #to add more attributes to the user
-    on_delete = models.PROTECT
+    user = models.OneToOneField(User, on_delete = models.CASCADE) #to add more attributes to the user
+    
 
 
     #additional attributes
