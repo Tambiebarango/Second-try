@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "app5/base.html" %}
+  {% block body_block %}
+
+  <div class="jumbotron">
+    <h1>Fill in the form below to login to your account</h1>
+    <form class=""  method="post">
+      {% csrf_token %}
+      <label for="username">Username:</label>
+      <input type="text" name="username" value="" placeholder="Enter username here">
+
+      <label for="password">Password:</label>
+      <input type="password" name="password" value="">
+
+      <input type="submit" name="" value="login">
+
+    </form>
+
+
+  </div>
+  {% endblock %}

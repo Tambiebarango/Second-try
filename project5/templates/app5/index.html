@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "app5/base.html" %}
+{% load customtemplates %}
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1>Welcome to Headless Babe</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>We would like to know you more.</p>
+  <p>Please go to our <a href="{% url 'signup' %}"}>signup</a> page to join our mailing list</p>
+  <p>If you need some help, refer to our <a href="{% url 'app5:help' %}">help page</a>.</p>
+  <p> <a href="{% url 'admin:index' %}">Admin page</a>  </p>
+  {{ text|cut:"Hello" }}
+  {{ number|add:"99" }}
+</div>
+
+
+    {% endblock %}
